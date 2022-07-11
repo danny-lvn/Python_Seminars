@@ -83,3 +83,10 @@ print(a)
 3 -> 2
 10 -> 55 
 '''
+N = int(input("Введите номер столбика "))
+count = [0 for i in range(N)]
+count[1] = 1
+count[2] = 2
+for i in range(3, N):
+    count[i] = count[i - 1] + count[i - 2]
+print(count[N - 1])
